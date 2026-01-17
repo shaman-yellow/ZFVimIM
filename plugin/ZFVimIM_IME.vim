@@ -959,7 +959,7 @@ function! s:popupMenuList(complete)
     endfor
 
     let &completeopt = 'menuone'
-    let &pumheight = 10
+    let &pumheight = get(g:, 'IME_pumheight', 5)
     return popup_list
 endfunction
 
